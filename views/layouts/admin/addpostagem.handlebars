@@ -1,0 +1,57 @@
+<h3>Nova Postagem</h3>
+<div class="card bg-dark" style="width: 30rem;">
+  <div class="card-body">
+    <form action="/admin/postagens/nova" method="POST">
+      {{! TITULO }}
+      <label style="color:#fff" for="titulo">Titulo:</label>
+      <input
+        type="text"
+        name="titulo"
+        id="titulo"
+        placeholder="Titilo da postagem."
+        class="form-control"
+      />
+      {{! SLUG }}
+      <label style="color:#fff" for="slug">Slug:</label>
+      <input
+        type="text"
+        name="slug"
+        id="slug"
+        placeholder="Slug da postagem."
+        class="form-control"
+      />
+      {{! DESCRIÇAO }}
+      <label style="color:#fff" for="descricao">Descrição:</label>
+      <input
+        type="text"
+        name="descricao"
+        id="descricao"
+        placeholder="Descrição da postagem."
+        class="form-control"
+      />
+      {{! CONTEUDO }}
+      <label style="color:#fff" for="conteudo">Conteudo:</label>
+
+      <textarea
+        class="form-control"
+        name="conteudo"
+        id="conteudo"
+        cols="30"
+        rows="6"
+        placeholder="Digite o conteudo da postagem."
+      ></textarea>
+      {{! CATEGORIA }}
+      <label style="color:#fff" for="categoria">Categoria</label>
+
+      <select class="custom-select" name="categoria" id="categoria">
+        {{#each categorias}}
+          <option value="{{_id}}">{{nome}}</option>
+        {{else}}
+          <option value="0">Nenhuma categoria existente</option>
+        {{/each}}
+      </select>
+      {{! BOTAO }}
+      <button type="submit" class="btn - btn-primary mt-4">Nova Postagem</button>
+    </form>
+  </div>
+</div>

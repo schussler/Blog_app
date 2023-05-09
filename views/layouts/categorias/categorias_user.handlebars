@@ -1,0 +1,14 @@
+<h1>categorias: </h1>
+<hr
+  style="    height: 1px;
+  background-color: black;
+"
+/>
+{{#each categorias}}
+  <a href="/categorias/{{slug}}">
+    <h4>{{nome}}</h4>
+  </a>
+
+{{else}}
+  <h4>Nenhuma categoria encontrada</h4>
+{{/each}}

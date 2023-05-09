@@ -1,0 +1,27 @@
+<div class="jumbotron">
+  <h1 class="display-4">Bem-vindo ao Blog</h1>
+  <p class="lead">Blog de tecnologia </p>
+  <hr class="my-4" />
+  <p>Feito para o curso de node e Mongo do victor lima</p>
+  <p class="lead">
+    <a class="btn btn-primary btn-lg" href="#" role="button">Crie uma conta</a>
+  </p>
+</div>
+
+<hr />
+<h2>Postagens recentes</h2>
+{{#each postagens}}
+  <div class="card mb-4">
+    <div class="card-body">
+      <h4><strong>titulo:</strong> {{titulo}}</h4>
+      <p><strong>Descrição :</strong> {{descricao}}</p>
+      <p><strong>Categoria:</strong> {{categoria.nome}}</p>
+      <p><strong>Data:</strong> {{data}}</p>
+      <a href="/postagem/{{slug}}">
+        <buttom class="btn btn-primary">Leia-mais</buttom>
+      </a>
+    </div>
+  </div>
+{{else}}
+  <p>Nenhuma Postagem</p>
+{{/each}}

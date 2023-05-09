@@ -1,0 +1,15 @@
+<h1 class="pb-2">{{categoria.nome}}</h1>
+{{#each postagens}}
+  <div class="card mb-4">
+    <div class="card-body">
+      <h4><strong>titulo:</strong> {{titulo}}</h4>
+      <p><strong>Descrição :</strong> {{descricao}}</p>
+      <p><strong>Data:</strong> {{data}}</p>
+      <a href="/postagem/{{slug}}">
+        <buttom class="btn btn-primary">Leia-mais</buttom>
+      </a>
+    </div>
+  </div>
+{{else}}
+  <p>Nenhuma Postagem</p>
+{{/each}}
