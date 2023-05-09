@@ -54,7 +54,9 @@ app.engine(
 app.set("view engine", "handlebars");
 //mongoose
 mongoose
-  .connect(db.mongoURI)
+  .connect(
+    "mongodb+srv://schussler855:QWzXse5rWYSxTHkN@cluster0.tzjlkuv.mongodb.net/"
+  )
   .then(() => {
     console.log("conectado com sucesso ao mongodb...");
   })
